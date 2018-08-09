@@ -1,4 +1,4 @@
-# The game of "Bisca"
+# The game of "Bisca" CI_TEST
 
 This project was made for an assignment for the University. The premise was to create a simple AI with the concept of Game theory.
 
