@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'javac src/AppStart.java && ls src/'
             }
         }
         stage('Test') {
