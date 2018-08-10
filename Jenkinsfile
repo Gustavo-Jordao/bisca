@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)" && echo "$changed_files" | grep "src/" && eval "ls src/"'    
+                sh 'changed_files="$(git diff-tree -r --name-only --no-commit-id $GIT_COMMIT $GIT_PREVIOUS_COMMIT)" && echo "$changed_files" | grep "src/" && eval "ls src/"'    
             }
         }
         stage('Test') {
